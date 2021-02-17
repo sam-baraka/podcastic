@@ -1,13 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:podcastic/uis/home/tab_contents/tab_contents.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoTabScaffold(
-      tabBuilder: (context, index) => Container(
-          // color: Colors.red,
-          ),
+      tabBuilder: (context, index) {
+        switch (index) {
+          case 0:
+            return Home();
+          case 1:
+            return Explore();
+          case 3:
+            return MyPodcasts();
+          case 4:
+            return Settings();
+          default:
+            return Home();
+        }
+      },
       tabBar: CupertinoTabBar(
         items: [
           BottomNavigationBarItem(
