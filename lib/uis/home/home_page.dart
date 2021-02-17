@@ -12,9 +12,9 @@ class HomePage extends StatelessWidget {
             return Home();
           case 1:
             return Explore();
-          case 3:
+          case 2:
             return MyPodcasts();
-          case 4:
+          case 3:
             return Settings();
           default:
             return Home();
