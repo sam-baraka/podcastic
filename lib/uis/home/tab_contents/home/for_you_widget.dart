@@ -18,6 +18,7 @@ class ForYouWidget extends StatelessWidget {
 }
 
 class ForYouCard extends StatelessWidget {
+  String image = TestImages.randomImage;
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -26,6 +27,8 @@ class ForYouCard extends StatelessWidget {
         height: 200,
         width: 200,
         color: Colors.pink,
+        decoration:
+            BoxDecoration(image: DecorationImage(image: AssetImage(image))),
       ),
     );
   }
