@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-
 import 'uis/uis.dart';
 
 void main() {
@@ -10,6 +9,7 @@ class PodcastApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoApp(
+      title: 'Podcastic',
       home: HomePage(),
     );
   }
