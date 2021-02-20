@@ -13,6 +13,11 @@ class Home extends StatelessWidget {
       slivers: [
         CupertinoSliverNavigationBar(
           largeTitle: Text("Podcastic", style: GoogleFonts.redHatDisplay()),
+          trailing: CupertinoButton(
+            onPressed: () {},
+            padding: EdgeInsets.all(0),
+            child: Icon(Icons.more_vert),
+          ),
         ),
         SliverFillRemaining(
           child: Padding(
