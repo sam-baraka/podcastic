@@ -33,6 +33,7 @@ dependencies:
   google_fonts: ^1.1.2
   image_color_picker: ^1.0.7
   auto_route: ^0.6.9
+  marquee: ^1.7.0
 
 dev_dependencies:
   flutter_test:
