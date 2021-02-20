@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:podcastic/test_images/test_images.dart';
 import 'package:podcastic/uis/home/tab_contents/tab_contents.dart';
+import 'package:marquee/marquee.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -42,41 +43,83 @@ class HomePage extends StatelessWidget {
           right: 0,
           bottom: 50,
           child: Material(
-            color: Colors.black54,
-            elevation: 20,
+            color: CupertinoTheme.brightnessOf(context) == Brightness.dark
+                ? Colors.white12
+                : Colors.black12,
             child: ListTile(
-              contentPadding: EdgeInsets.all(4),
-              leading: ClipRRect(
-                borderRadius: BorderRadius.circular(5),
-                child: Container(
-                    height: 50,
-                    width: 50,
-                    child: Image.asset(
-                      TestImages.getRandomImage(),
-                      fit: BoxFit.fitHeight,
-                    )),
-              ),
-              trailing: CupertinoButton(
-                padding: EdgeInsets.all(0),
-                onPressed: () {
-                  //TODO: Add on pressed
-                },
-                child: Icon(
-                  CupertinoIcons.pause,
-                  size: 40,
-                  color: Colors.white,
+                contentPadding: EdgeInsets.all(4),
+                leading: ClipRRect(
+                  borderRadius: BorderRadius.circular(5),
+                  child: Container(
+                      height: 50,
+                      width: 50,
+                      child: Image.asset(
+                        TestImages.getRandomImage(),
+                        fit: BoxFit.fitHeight,
+                      )),
                 ),
-              ),
-              title: Text(
-                "All about the perseverance rover by Samuel Baraka",
-                style: GoogleFonts.redHatDisplay(
-                    color: Colors.white, fontSize: 18),
-              ),
-              subtitle: Text(
-                "All about the perseverance rover by Samuel Baraka",
-                style: GoogleFonts.redHatDisplay(color: Colors.white),
-              ),
-            ),
+                trailing: CupertinoButton(
+                  padding: EdgeInsets.all(0),
+                  onPressed: () {
+                    //TODO: Add on pressed
+                  },
+                  child: Icon(
+                    CupertinoIcons.pause,
+                    size: 40,
+                    color: Colors.white,
+                  ),
+                ),
+                title: Container(
+                  height: 20,
+                  child: Marquee(
+                    text: "All about the perseverance rover by Samuel Baraka",
+                    scrollAxis: Axis.horizontal,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    blankSpace: 20.0,
+                    velocity: 100.0,
+                    pauseAfterRound: Duration(seconds: 1),
+                    startPadding: 10.0,
+                    accelerationDuration: Duration(seconds: 1),
+                    accelerationCurve: Curves.linear,
+                    decelerationDuration: Duration(milliseconds: 500),
+                    decelerationCurve: Curves.easeOut,
+                    style: GoogleFonts.redHatDisplay(
+                        color: CupertinoTheme.brightnessOf(context) ==
+                                Brightness.dark
+                            ? Colors.white
+                            : Colors.black,
+                        fontSize: 16),
+                  ),
+                ),
+                subtitle: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CupertinoButton(
+                        padding: EdgeInsets.all(4),
+                        onPressed: () {},
+                        child: Icon(
+                          Icons.replay_10_outlined,
+                          size: 30,
+                        )),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    CupertinoButton(
+                        padding: EdgeInsets.all(4),
+                        onPressed: () {},
+                        child: Icon(
+                          CupertinoIcons.play,
+                          size: 40,
+                        )),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    CupertinoButton(
+                        padding: EdgeInsets.all(4),
+                        onPressed: () {},
+                        child: Icon(Icons.forward_10_outlined, size: 30)),
+                  ],
+                )),
           ),
         )
       ],
