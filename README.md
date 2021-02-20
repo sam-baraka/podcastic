@@ -1,4 +1,5 @@
-# podcastic
+![alt text](https://raw.githubusercontent.com/sababuvercetti/podcastic/main/assets/icon/icon.png)
+# Podcastic
 
 An open source podcast application
 
