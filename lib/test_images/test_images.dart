@@ -3,16 +3,18 @@ import 'dart:math';
 class TestImages {
   static List<String> images = [
     'assets/images/podcast1.jpg',
-    'assets/images/podcast1.jpg',
-    'assets/images/podcast1.jpg',
-    'assets/images/podcast1.jpg',
-    'assets/images/podcast1.jpg',
+    'assets/images/podcast2.jpg',
+    'assets/images/podcast3.jpg',
+    'assets/images/podcast4.jpg',
+    'assets/images/podcast5.jpg',
   ];
 
-  // generates a new Random object
-  static final _random = new Random();
+  static String getRandomImage() {
+    // generates a new Random object
+    final _random = new Random();
 
 // generate a random index based on the list length
 // and use it to retrieve the element
-  static String randomImage = images[_random.nextInt(images.length)];
+    return images[_random.nextInt(images.length)];
+  }
 }
