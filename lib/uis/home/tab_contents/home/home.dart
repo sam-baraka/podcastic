@@ -15,20 +15,23 @@ class Home extends StatelessWidget {
           largeTitle: Text("Podcastic", style: GoogleFonts.redHatDisplay()),
         ),
         SliverFillRemaining(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "For you",
-                style: GoogleFonts.redHatDisplay(
-                    color: CupertinoColors.activeBlue,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold),
-              ),
-              ForYouWidget(),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Top podcasts for you",
+                  style: GoogleFonts.redHatDisplay(
+                      color: CupertinoColors.activeBlue,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold),
+                ),
+                ForYouWidget(),
+              ],
+            ),
           ),
-        )
+        ),
       ],
     ));
   }
