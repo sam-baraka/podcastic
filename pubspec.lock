@@ -37,7 +37,7 @@ packages:
     source: hosted
     version: "2.5.0-nullsafety.1"
   auto_route:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: auto_route
       url: "https://pub.dartlang.org"
