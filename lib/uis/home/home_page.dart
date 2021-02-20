@@ -66,7 +66,6 @@ class HomePage extends StatelessWidget {
                   child: Icon(
                     CupertinoIcons.pause,
                     size: 40,
-                    color: Colors.white,
                   ),
                 ),
                 title: Container(
