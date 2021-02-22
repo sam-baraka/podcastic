@@ -13,11 +13,6 @@ class Home extends StatelessWidget {
       slivers: [
         CupertinoSliverNavigationBar(
           largeTitle: Text("Podcastic", style: GoogleFonts.redHatDisplay()),
-          trailing: CupertinoButton(
-            onPressed: () {},
-            padding: EdgeInsets.all(0),
-            child: Icon(Icons.more_vert),
-          ),
         ),
         SliverFillRemaining(
           child: Padding(
@@ -28,7 +23,10 @@ class Home extends StatelessWidget {
                 Text(
                   "Top podcasts for you",
                   style: GoogleFonts.redHatDisplay(
-                      color: CupertinoColors.activeBlue,
+                      color: CupertinoTheme.brightnessOf(context) ==
+                              Brightness.dark
+                          ? Colors.white
+                          : Colors.black,
                       fontSize: 24,
                       fontWeight: FontWeight.bold),
                 ),
