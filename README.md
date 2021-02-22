@@ -5,9 +5,7 @@
 
 # Podcastic
 
-An open source podcast application
 
-## Getting Started
 
 This project is an open source podcast application
 
