@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:podcastic/test_images/test_images.dart';
 
 part 'for_you_widget.dart';
+part 'new_podcasts_widget.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -31,6 +32,7 @@ class Home extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
                 ForYouWidget(),
+                NewPodcastsWidget()
               ],
             ),
           ),
