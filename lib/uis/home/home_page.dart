@@ -43,7 +43,9 @@ class HomePage extends StatelessWidget {
           right: 0,
           bottom: 50,
           child: Material(
-            color: Colors.grey,
+            color: CupertinoTheme.brightnessOf(context) == Brightness.dark
+                ? Colors.black87
+                : Colors.white,
             child: ListTile(
               contentPadding: EdgeInsets.all(4),
               leading: ClipRRect(
