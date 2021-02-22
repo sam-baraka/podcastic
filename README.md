@@ -1,6 +1,8 @@
 <p align="center">
-  <img align="center" width="200" height="200" src="https://raw.githubusercontent.com/sababuvercetti/podcastic/main/assets/icon/icon.png">
+  <img align="left" width="200" height="200" src="https://raw.githubusercontent.com/sababuvercetti/podcastic/main/assets/icon/icon.png">
 </p>
+
+
 # Podcastic
 
 An open source podcast application
