@@ -47,78 +47,79 @@ class HomePage extends StatelessWidget {
                 ? Colors.white12
                 : Colors.black12,
             child: ListTile(
-                contentPadding: EdgeInsets.all(4),
-                leading: ClipRRect(
-                  borderRadius: BorderRadius.circular(5),
-                  child: Container(
-                      height: 50,
-                      width: 50,
-                      child: Image.asset(
-                        TestImages.getRandomImage(),
-                        fit: BoxFit.fitHeight,
-                      )),
+              contentPadding: EdgeInsets.all(4),
+              leading: ClipRRect(
+                borderRadius: BorderRadius.circular(5),
+                child: Container(
+                    height: 50,
+                    width: 50,
+                    child: Image.asset(
+                      TestImages.getRandomImage(),
+                      fit: BoxFit.fitHeight,
+                    )),
+              ),
+              trailing: CupertinoButton(
+                padding: EdgeInsets.all(0),
+                onPressed: () {
+                  //TODO: Add on pressed
+                },
+                child: Icon(
+                  CupertinoIcons.pause,
+                  size: 40,
                 ),
-                trailing: CupertinoButton(
-                  padding: EdgeInsets.all(0),
-                  onPressed: () {
-                    //TODO: Add on pressed
-                  },
-                  child: Icon(
-                    CupertinoIcons.pause,
-                    size: 40,
-                  ),
+              ),
+              title: Container(
+                height: 20,
+                child: Marquee(
+                  text: "All about the perseverance rover by Samuel Baraka",
+                  scrollAxis: Axis.horizontal,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  blankSpace: 20.0,
+                  velocity: 100.0,
+                  pauseAfterRound: Duration(seconds: 1),
+                  startPadding: 10.0,
+                  accelerationDuration: Duration(seconds: 1),
+                  accelerationCurve: Curves.linear,
+                  decelerationDuration: Duration(milliseconds: 500),
+                  decelerationCurve: Curves.easeOut,
+                  style: GoogleFonts.redHatDisplay(
+                      color: CupertinoTheme.brightnessOf(context) ==
+                              Brightness.dark
+                          ? Colors.white
+                          : Colors.black,
+                      fontSize: 16),
                 ),
-                title: Container(
-                  height: 20,
-                  child: Marquee(
-                    text: "All about the perseverance rover by Samuel Baraka",
-                    scrollAxis: Axis.horizontal,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    blankSpace: 20.0,
-                    velocity: 100.0,
-                    pauseAfterRound: Duration(seconds: 1),
-                    startPadding: 10.0,
-                    accelerationDuration: Duration(seconds: 1),
-                    accelerationCurve: Curves.linear,
-                    decelerationDuration: Duration(milliseconds: 500),
-                    decelerationCurve: Curves.easeOut,
-                    style: GoogleFonts.redHatDisplay(
-                        color: CupertinoTheme.brightnessOf(context) ==
-                                Brightness.dark
-                            ? Colors.white
-                            : Colors.black,
-                        fontSize: 16),
-                  ),
-                ),
-                subtitle: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CupertinoButton(
-                        padding: EdgeInsets.all(4),
-                        onPressed: () {},
-                        child: Icon(
-                          Icons.replay_10_outlined,
-                          size: 30,
-                        )),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    CupertinoButton(
-                        padding: EdgeInsets.all(4),
-                        onPressed: () {},
-                        child: Icon(
-                          CupertinoIcons.play,
-                          size: 40,
-                        )),
-                    SizedBox(
-                      width: 20,
-                    ),
-                    CupertinoButton(
-                        padding: EdgeInsets.all(4),
-                        onPressed: () {},
-                        child: Icon(Icons.forward_10_outlined, size: 30)),
-                  ],
-                )),
+              ),
+              // subtitle: Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     CupertinoButton(
+              //         padding: EdgeInsets.all(4),
+              //         onPressed: () {},
+              //         child: Icon(
+              //           Icons.replay_10_outlined,
+              //           size: 30,
+              //         )),
+              //     SizedBox(
+              //       width: 20,
+              //     ),
+              //     CupertinoButton(
+              //         padding: EdgeInsets.all(4),
+              //         onPressed: () {},
+              //         child: Icon(
+              //           CupertinoIcons.play,
+              //           size: 40,
+              //         )),
+              //     SizedBox(
+              //       width: 20,
+              //     ),
+              //     CupertinoButton(
+              //         padding: EdgeInsets.all(4),
+              //         onPressed: () {},
+              //         child: Icon(Icons.forward_10_outlined, size: 30)),
+              //   ],
+              // )
+            ),
           ),
         )
       ],
