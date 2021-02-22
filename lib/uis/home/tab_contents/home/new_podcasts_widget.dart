@@ -6,9 +6,11 @@ class NewPodcastsWidget extends StatelessWidget {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text("Sam"),
-        Text("Sam"),
-        Text("Sam"),
+        PodcastTile(),
+        PodcastTile(),
+        PodcastTile(),
+        PodcastTile(),
+        PodcastTile(),
       ],
     );
   }
