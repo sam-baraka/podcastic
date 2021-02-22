@@ -1,4 +1,4 @@
-<p align="center">![alt text](https://raw.githubusercontent.com/sababuvercetti/podcastic/main/assets/icon/icon.png)</p>
+<p align="center"><img align="right" width="200" height="200" src="https://raw.githubusercontent.com/sababuvercetti/podcastic/main/assets/icon/icon.png"></p>
 # Podcastic
 
 An open source podcast application
