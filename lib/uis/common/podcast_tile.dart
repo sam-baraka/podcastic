@@ -8,26 +8,38 @@ class PodcastTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: CupertinoTheme.brightnessOf(context) == Brightness.dark
-          ? Colors.black
-          : Colors.white,
-      child: ListTile(
-        title: Text(
-          "Tesla buys 1500000 in bit coin",
-          style: GoogleFonts.redHatDisplay(
-            color: CupertinoTheme.brightnessOf(context) == Brightness.dark
-                ? Colors.white
-                : Colors.black,
+    return Padding(
+      padding: const EdgeInsets.only(top: 4.0),
+      child: Material(
+        color: CupertinoTheme.brightnessOf(context) == Brightness.dark
+            ? Colors.black
+            : Colors.white,
+        child: ListTile(
+          leading: Container(
+              height: 50,
+              width: 50,
+              child: Image.asset(
+                image,
+                fit: BoxFit.fitHeight,
+              )),
+          title: Text(
+            "Tesla buys 1500000 in bit coin",
+            style: GoogleFonts.redHatDisplay(
+              color: CupertinoTheme.brightnessOf(context) == Brightness.dark
+                  ? Colors.white
+                  : Colors.black,
+            ),
           ),
-        ),
-        subtitle: Text(
-          "Lew Later",
-          style: GoogleFonts.redHatDisplay(
-            color: CupertinoTheme.brightnessOf(context) == Brightness.dark
-                ? Colors.white
-                : Colors.black,
+          subtitle: Text(
+            "Lew Later",
+            style: GoogleFonts.redHatDisplay(
+              color: CupertinoTheme.brightnessOf(context) == Brightness.dark
+                  ? Colors.white
+                  : Colors.black,
+            ),
           ),
+          trailing: CupertinoButton(
+              onPressed: () {}, child: Icon(CupertinoIcons.cloud_download)),
         ),
       ),
     );
