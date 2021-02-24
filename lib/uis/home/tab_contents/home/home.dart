@@ -34,7 +34,17 @@ class Home extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
                 ForYouWidget(),
-                NewPodcastsWidget()
+                Text(
+                  "New podcasts",
+                  style: GoogleFonts.redHatDisplay(
+                      color: CupertinoTheme.brightnessOf(context) ==
+                              Brightness.dark
+                          ? Colors.white
+                          : Colors.black,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold),
+                ),
+                Expanded(child: NewPodcastsWidget())
               ],
             ),
           ),

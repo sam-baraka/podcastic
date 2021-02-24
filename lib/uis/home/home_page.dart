@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
               BottomNavigationBarItem(
                   icon: Icon(CupertinoIcons.home), label: 'Home'),
               BottomNavigationBarItem(
-                  icon: Icon(CupertinoIcons.lightbulb), label: 'Explore'),
+                  icon: Icon(CupertinoIcons.search), label: 'Explore'),
               BottomNavigationBarItem(
                   icon: Icon(CupertinoIcons.list_dash), label: 'My podcasts'),
               BottomNavigationBarItem(
