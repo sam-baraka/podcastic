@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:podcastic/colors/app_colors.dart';
 import 'package:podcastic/routes/routes.gr.dart';
 import 'package:podcastic/routes/routes.gr.dart' as r;
@@ -19,7 +20,17 @@ class PodcastApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoApp(
         title: 'Podcastic',
-        theme: CupertinoThemeData(primaryColor: AppColors.appLightGreenColor),
+        theme: CupertinoThemeData(
+            primaryColor: AppColors.appLightGreenColor,
+            textTheme: CupertinoTextThemeData(
+                tabLabelTextStyle: GoogleFonts.redHatDisplay(),
+                navTitleTextStyle: GoogleFonts.redHatDisplay(),
+                dateTimePickerTextStyle: GoogleFonts.redHatDisplay(),
+                pickerTextStyle: GoogleFonts.redHatDisplay(),
+                actionTextStyle: GoogleFonts.redHatDisplay(),
+                navLargeTitleTextStyle: GoogleFonts.redHatDisplay(),
+                navActionTextStyle: GoogleFonts.redHatDisplay(),
+                textStyle: GoogleFonts.redHatDisplay())),
         builder: ExtendedNavigator.builder<r.Router>(
             router: r.Router(), initialRoute: Routes.homePage));
   }
