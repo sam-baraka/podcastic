@@ -1,10 +1,16 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart';
 import 'package:podcastic/colors/app_colors.dart';
 import 'package:podcastic/routes/routes.gr.dart';
 import 'package:podcastic/routes/routes.gr.dart' as r;
 
 void main() {
+  LicenseRegistry.addLicense(() async* {
+    final license = await rootBundle.loadString('google_fonts/OFL.txt');
+    yield LicenseEntryWithLineBreaks(['google_fonts'], license);
+  });
   runApp(PodcastApp());
 }
 
