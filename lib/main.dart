@@ -22,15 +22,8 @@ class PodcastApp extends StatelessWidget {
         title: 'Podcastic',
         theme: CupertinoThemeData(
             primaryColor: AppColors.appLightGreenColor,
-            textTheme: CupertinoTextThemeData(
-                tabLabelTextStyle: GoogleFonts.redHatDisplay(),
-                navTitleTextStyle: GoogleFonts.redHatDisplay(),
-                dateTimePickerTextStyle: GoogleFonts.redHatDisplay(),
-                pickerTextStyle: GoogleFonts.redHatDisplay(),
-                actionTextStyle: GoogleFonts.redHatDisplay(),
-                navLargeTitleTextStyle: GoogleFonts.redHatDisplay(),
-                navActionTextStyle: GoogleFonts.redHatDisplay(),
-                textStyle: GoogleFonts.redHatDisplay())),
+            textTheme:
+                CupertinoTextThemeData(textStyle: GoogleFonts.redHatDisplay())),
         builder: ExtendedNavigator.builder<r.Router>(
             router: r.Router(), initialRoute: Routes.homePage));
   }
