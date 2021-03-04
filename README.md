@@ -17,4 +17,5 @@ samples, guidance on mobile development, and a full API reference.
 
 ## About this application
 
-- This project is gonna use cupertino design language(Which is highly underated in flutter)
+- This project is gonna use cupertino design language(Which is highly underated in flutter).
+- This application will run on all major operating system platforms.
