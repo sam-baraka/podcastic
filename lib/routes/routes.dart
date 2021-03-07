@@ -4,7 +4,7 @@ import 'package:podcastic/uis/home/home_page.dart';
 @CupertinoAutoRouter(
   replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
-    AutoRoute(page: HomePage),
+    AutoRoute(page: HomePage, initial: true),
   ],
 )
 class $AppRouter {}

@@ -21,13 +21,12 @@ class AppRouter extends _i1.RootStackRouter {
   @override
   List<_i1.RouteConfig> get routes => [
         _i1.RouteConfig<HomeRoute>(HomeRoute.name,
-            path: '/home-page',
-            routeBuilder: (match) => HomeRoute.fromMatch(match))
+            path: '/', routeBuilder: (match) => HomeRoute.fromMatch(match))
       ];
 }
 
 class HomeRoute extends _i1.PageRouteInfo {
-  const HomeRoute() : super(name, path: '/home-page');
+  const HomeRoute() : super(name, path: '/');
 
   HomeRoute.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
 
