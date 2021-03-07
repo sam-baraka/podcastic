@@ -8,6 +8,7 @@ import 'package:podcastic/routes/routes.gr.dart';
 import 'package:podcastic/routes/routes.gr.dart' as r;
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   LicenseRegistry.addLicense(() async* {
     final license = await rootBundle.loadString('google_fonts/OFL.txt');
     yield LicenseEntryWithLineBreaks(['google_fonts'], license);
