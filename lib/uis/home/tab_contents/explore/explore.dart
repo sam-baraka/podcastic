@@ -70,12 +70,22 @@ class Category extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
+        padding: EdgeInsets.all(8),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5), gradient: gradient),
         height: 50,
-        child: ListTile(
-          title: Text(
+        child: GridTile(
+          child: FlutterLogo(
+            textColor: gradient.colors[0],
+            style: FlutterLogoStyle.markOnly,
+          ),
+          header: Text(
             "Comedy",
+            style: TextStyle(color: Colors.white, fontSize: 24),
+          ),
+          footer: Text(
+            "Comedy lorem ipsum th ebest is here",
+            style: TextStyle(color: Colors.white, fontSize: 16),
           ),
         ),
       ),
