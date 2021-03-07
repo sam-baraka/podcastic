@@ -4,34 +4,32 @@
 // AutoRouteGenerator
 // **************************************************************************
 
-// ignore_for_file: public_member_api_docs
+import 'package:auto_route/auto_route.dart' as _i1;
 
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
+import '../uis/home/home_page.dart' as _i2;
 
-import '../uis/home/home_page.dart';
+class AppRouter extends _i1.RootStackRouter {
+  AppRouter();
 
-class Routes {
-  static const String homePage = '/';
-  static const all = <String>{
-    homePage,
+  @override
+  final Map<String, _i1.PageFactory> pagesMap = {
+    HomeRoute.name: (entry) {
+      return _i1.CupertinoPageX(entry: entry, child: _i2.HomePage());
+    }
   };
+
+  @override
+  List<_i1.RouteConfig> get routes => [
+        _i1.RouteConfig<HomeRoute>(HomeRoute.name,
+            path: '/home-page',
+            routeBuilder: (match) => HomeRoute.fromMatch(match))
+      ];
 }
 
-class Router extends RouterBase {
-  @override
-  List<RouteDef> get routes => _routes;
-  final _routes = <RouteDef>[
-    RouteDef(Routes.homePage, page: HomePage),
-  ];
-  @override
-  Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
-  final _pagesMap = <Type, AutoRouteFactory>{
-    HomePage: (data) {
-      return MaterialPageRoute<dynamic>(
-        builder: (context) => HomePage(),
-        settings: data,
-      );
-    },
-  };
+class HomeRoute extends _i1.PageRouteInfo {
+  const HomeRoute() : super(name, path: '/home-page');
+
+  HomeRoute.fromMatch(_i1.RouteMatch match) : super.fromMatch(match);
+
+  static const String name = 'HomeRoute';
 }

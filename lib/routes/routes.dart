@@ -1,10 +1,10 @@
-import 'package:auto_route/auto_route_annotations.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:podcastic/uis/home/home_page.dart';
 
-@MaterialAutoRouter(
+@CupertinoAutoRouter(
+  replaceInRouteName: 'Page,Route',
   routes: <AutoRoute>[
-    // initial route is named "/"
-    MaterialRoute(page: HomePage, initial: true),
+    AutoRoute(page: HomePage),
   ],
 )
-class $Router {}
+class $AppRouter {}
