@@ -1,64 +1,46 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:podcastic/uis/common/sliver_app_bar_delegate.dart';
 
 class Explore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-        child: CustomScrollView(
-      slivers: [
-        CupertinoSliverNavigationBar(
-          largeTitle:
-              Text("Explore podcasts", style: GoogleFonts.redHatDisplay()),
+      navigationBar: CupertinoNavigationBar(
+        middle: CupertinoTextField(
+          placeholder: "Search",
         ),
-        SliverFillRemaining(
-          child: Column(
-            children: [
-              // Container(
-              //   decoration:
-              //       BoxDecoration(border: Border.all(color: Colors.grey)),
-              //   child: CupertinoTextFormFieldRow(
-              //     prefix: Icon(CupertinoIcons.mic),
-              //     placeholder: 'Podcast name, topic, category...',
-              //     placeholderStyle: TextStyle(
-              //         color: CupertinoTheme.brightnessOf(context) ==
-              //                 Brightness.dark
-              //             ? Colors.white
-              //             : Colors.grey),
-              //   ),
-              // ),
-              Flexible(
-                child: GridView(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: (MediaQuery.of(context).size.height /
-                              MediaQuery.of(context).size.width)
-                          .ceil()),
-                  children: [
-                    Category(
-                      gradient:
-                          LinearGradient(colors: [Colors.red, Colors.blue]),
-                    ),
-                    Category(
-                      gradient:
-                          LinearGradient(colors: [Colors.yellow, Colors.green]),
-                    ),
-                    Category(
-                      gradient:
-                          LinearGradient(colors: [Colors.cyan, Colors.blue]),
-                    ),
-                    Category(
-                      gradient: LinearGradient(
-                          colors: [Colors.pink, Colors.greenAccent]),
-                    ),
-                  ],
+      ),
+      child: Column(
+        children: [
+          Flexible(
+            child: GridView(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: (MediaQuery.of(context).size.height /
+                          MediaQuery.of(context).size.width)
+                      .ceil()),
+              children: [
+                Category(
+                  gradient: LinearGradient(colors: [Colors.red, Colors.blue]),
                 ),
-              )
-            ],
-          ),
-        )
-      ],
-    ));
+                Category(
+                  gradient:
+                      LinearGradient(colors: [Colors.yellow, Colors.green]),
+                ),
+                Category(
+                  gradient: LinearGradient(colors: [Colors.cyan, Colors.blue]),
+                ),
+                Category(
+                  gradient:
+                      LinearGradient(colors: [Colors.pink, Colors.greenAccent]),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
 
