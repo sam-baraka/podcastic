@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:podcastic/uis/custom/context_menu.dart' as ctx;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:podcastic/uis/common/sliver_app_bar_delegate.dart';
 
@@ -38,7 +39,7 @@ class Category extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: CupertinoContextMenu(
+      child: ctx.CupertinoContextMenu(
         actions: [
           Text("sam"),
           Text("sam"),
