@@ -239,7 +239,7 @@ class _CupertinoContextMenuState extends State<CupertinoContextMenu>
   void initState() {
     super.initState();
     _openController = AnimationController(
-      duration: Duration(milliseconds: 10),
+      duration: Duration(microseconds: 1),
       vsync: this,
     );
     _openController.addStatusListener(_onDecoyAnimationStatusChange);
@@ -574,7 +574,7 @@ class _ContextMenuRoute<T> extends PopupRoute<T> {
   // The duration of the transition used when a modal popup is shown. Eyeballed
   // from a physical device running iOS 13.1.2.
   static const Duration _kModalPopupTransitionDuration =
-      Duration(milliseconds: 335);
+      Duration(milliseconds: 50);
 
   final List<Widget> _actions;
   final _ContextMenuPreviewBuilderChildless? _builder;
