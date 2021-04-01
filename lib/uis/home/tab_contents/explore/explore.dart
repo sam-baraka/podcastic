@@ -21,20 +21,9 @@ class Explore extends StatelessWidget {
                           MediaQuery.of(context).size.width)
                       .ceil()),
               children: [
-                Category(
-                  gradient: LinearGradient(colors: [Colors.red, Colors.blue]),
-                ),
-                Category(
-                  gradient:
-                      LinearGradient(colors: [Colors.yellow, Colors.green]),
-                ),
-                Category(
-                  gradient: LinearGradient(colors: [Colors.cyan, Colors.blue]),
-                ),
-                Category(
-                  gradient:
-                      LinearGradient(colors: [Colors.pink, Colors.greenAccent]),
-                ),
+                Category(),
+                Category(),
+                Category(),
               ],
             ),
           )
@@ -45,31 +34,15 @@ class Explore extends StatelessWidget {
 }
 
 class Category extends StatelessWidget {
-  final LinearGradient gradient;
-
-  const Category({Key key, this.gradient}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
       child: Container(
-        padding: EdgeInsets.all(8),
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(5), gradient: gradient),
         height: 50,
-        child: GridTile(
-          child: FlutterLogo(
-            textColor: gradient.colors[0],
-            style: FlutterLogoStyle.markOnly,
-          ),
-          header: Text(
-            "Comedy",
-            style: TextStyle(color: Colors.white, fontSize: 24),
-          ),
-          footer: Text(
-            "Comedy lorem ipsum th ebest is here",
-            style: TextStyle(color: Colors.white, fontSize: 16),
-          ),
-        ),
+        decoration: BoxDecoration(
+            color: Colors.blue, borderRadius: BorderRadius.circular(20)),
+        child: Column(),
       ),
     );
   }
