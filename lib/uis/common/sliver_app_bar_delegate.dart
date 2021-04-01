@@ -3,9 +3,9 @@ import 'dart:math';
 
 class CustomSliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   CustomSliverAppBarDelegate({
-    @required this.minHeight,
-    @required this.maxHeight,
-    @required this.child,
+    required this.minHeight,
+    required this.maxHeight,
+    required this.child,
   });
 
   final double minHeight;
