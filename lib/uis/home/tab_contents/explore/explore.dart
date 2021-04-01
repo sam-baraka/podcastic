@@ -44,22 +44,6 @@ class Category extends StatelessWidget {
           Text("sam"),
           Text("sam"),
         ],
-        previewBuilder:
-            (BuildContext context, Animation<double> animation, Widget child) {
-          return FittedBox(
-            fit: BoxFit.cover,
-            // This ClipRRect rounds the corners of the image when the
-            // CupertinoContextMenu is open, even though it's not rounded when
-            // it's closed. It uses the given animation to animate the corners
-            // in sync with the opening animation.
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(64.0 * animation.value),
-              child: Container(
-                color: Colors.red,
-              ),
-            ),
-          );
-        },
         child: Container(
           height: 50,
           decoration: BoxDecoration(
