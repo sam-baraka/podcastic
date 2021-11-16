@@ -131,8 +131,7 @@ class CupertinoContextMenu extends StatefulWidget {
     required this.actions,
     required this.child,
     this.previewBuilder,
-  })  : assert(actions != null && actions.isNotEmpty),
-        assert(child != null),
+  })  : assert(actions.isNotEmpty),
         super(key: key);
 
   /// The widget that can be "opened" with the [CupertinoContextMenu].
@@ -238,7 +237,7 @@ class _CupertinoContextMenuState extends State<CupertinoContextMenu>
   void initState() {
     super.initState();
     _openController = AnimationController(
-      duration: Duration(microseconds: 1),
+      duration: const Duration(microseconds: 1),
       vsync: this,
     );
     _openController.addStatusListener(_onDecoyAnimationStatusChange);
@@ -374,7 +373,6 @@ class _CupertinoContextMenuState extends State<CupertinoContextMenu>
     );
 
     // Create a decoy child in an overlay directly on top of the original child.
-    // TODO(justinmc): There is a known inconsistency with native here, due to
     // doing the bounce animation using a decoy in the top level Overlay. The
     // decoy will pop on top of the AppBar if the child is partially behind it,
     // such as a top item in a partially scrolled view. However, if we don't use
@@ -448,7 +446,6 @@ class _DecoyChild extends StatefulWidget {
 
 class _DecoyChildState extends State<_DecoyChild>
     with TickerProviderStateMixin {
-  // TODO(justinmc): Dark mode support.
   // See https://github.com/flutter/flutter/issues/43211.
   static const Color _lightModeMaskColor = Color(0xFF888888);
   static const Color _masklessColor = Color(0xFFFFFFFF);
@@ -514,7 +511,6 @@ class _DecoyChildState extends State<_DecoyChild>
         : _mask.value;
     return Positioned.fromRect(
       rect: _rect.value!,
-      // TODO(justinmc): When ShaderMask is supported on web, remove this
       // conditional and use ShaderMask everywhere.
       // https://github.com/flutter/flutter/issues/52967.
       child: kIsWeb
@@ -557,8 +553,7 @@ class _ContextMenuRoute<T> extends PopupRoute<T> {
     ui.ImageFilter? filter,
     required Rect previousChildRect,
     RouteSettings? settings,
-  })  : assert(actions != null && actions.isNotEmpty),
-        assert(contextMenuLocation != null),
+  })  : assert(actions.isNotEmpty),
         _actions = actions,
         _builder = builder,
         _contextMenuLocation = contextMenuLocation,
@@ -860,9 +855,7 @@ class _ContextMenuRouteStatic extends StatefulWidget {
     this.onDismiss,
     required this.orientation,
     this.sheetGlobalKey,
-  })  : assert(contextMenuLocation != null),
-        assert(orientation != null),
-        super(key: key);
+  }) : super(key: key);
 
   final List<Widget>? actions;
   final Widget child;
@@ -1194,9 +1187,7 @@ class _ContextMenuSheet extends StatelessWidget {
     required this.actions,
     required _ContextMenuLocation contextMenuLocation,
     required Orientation orientation,
-  })  : assert(actions != null && actions.isNotEmpty),
-        assert(contextMenuLocation != null),
-        assert(orientation != null),
+  })  : assert(actions.isNotEmpty),
         _contextMenuLocation = contextMenuLocation,
         _orientation = orientation,
         super(key: key);

@@ -16,15 +16,15 @@ class HomePage extends StatelessWidget {
           tabBuilder: (context, index) {
             switch (index) {
               case 0:
-                return Home();
+                return const Home();
               case 1:
-                return Explore();
+                return const Explore();
               case 2:
-                return MyPodcasts();
+                return const MyPodcasts();
               case 3:
-                return Settings();
+                return const Settings();
               default:
-                return Home();
+                return const Home();
             }
           },
           tabBar: CupertinoTabBar(
@@ -52,7 +52,7 @@ class HomePage extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Container(
+                            SizedBox(
                               height: 200,
                               width: 200,
                               child: Image.asset(
@@ -60,7 +60,7 @@ class HomePage extends StatelessWidget {
                                 fit: BoxFit.fitHeight,
                               ),
                             ),
-                            Container(
+                            SizedBox(
                               height: 20,
                               child: Marquee(
                                 text:
@@ -69,12 +69,13 @@ class HomePage extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 blankSpace: 20.0,
                                 velocity: 100.0,
-                                pauseAfterRound: Duration(seconds: 1),
+                                pauseAfterRound: const Duration(seconds: 1),
                                 startPadding: 10.0,
-                                accelerationDuration: Duration(seconds: 1),
+                                accelerationDuration:
+                                    const Duration(seconds: 1),
                                 accelerationCurve: Curves.linear,
                                 decelerationDuration:
-                                    Duration(milliseconds: 500),
+                                    const Duration(milliseconds: 500),
                                 decelerationCurve: Curves.easeOut,
                                 style: GoogleFonts.redHatDisplay(
                                     color:
@@ -89,55 +90,45 @@ class HomePage extends StatelessWidget {
                               children: [
                                 Expanded(
                                   child: CupertinoButton(
-                                    padding: EdgeInsets.all(0),
-                                    onPressed: () {
-                                      //TODO: Add on pressed
-                                    },
-                                    child: Icon(
+                                    padding: const EdgeInsets.all(0),
+                                    onPressed: () {},
+                                    child: const Icon(
                                       CupertinoIcons.backward_end_alt,
                                       size: 40,
                                     ),
                                   ),
                                 ),
                                 CupertinoButton(
-                                  padding: EdgeInsets.all(0),
-                                  onPressed: () {
-                                    //TODO: Add on pressed
-                                  },
-                                  child: Icon(
+                                  padding: const EdgeInsets.all(0),
+                                  onPressed: () {},
+                                  child: const Icon(
                                     CupertinoIcons.gobackward_10,
                                     size: 40,
                                   ),
                                 ),
                                 Expanded(
                                   child: CupertinoButton(
-                                    padding: EdgeInsets.all(0),
-                                    onPressed: () {
-                                      //TODO: Add on pressed
-                                    },
-                                    child: Icon(
+                                    padding: const EdgeInsets.all(0),
+                                    onPressed: () {},
+                                    child: const Icon(
                                       CupertinoIcons.play,
                                       size: 40,
                                     ),
                                   ),
                                 ),
                                 CupertinoButton(
-                                  padding: EdgeInsets.all(0),
-                                  onPressed: () {
-                                    //TODO: Add on pressed
-                                  },
-                                  child: Icon(
+                                  padding: const EdgeInsets.all(0),
+                                  onPressed: () {},
+                                  child: const Icon(
                                     CupertinoIcons.goforward_10,
                                     size: 40,
                                   ),
                                 ),
                                 Expanded(
                                   child: CupertinoButton(
-                                    padding: EdgeInsets.all(0),
-                                    onPressed: () {
-                                      //TODO: Add on pressed
-                                    },
-                                    child: Icon(
+                                    padding: const EdgeInsets.all(0),
+                                    onPressed: () {},
+                                    child: const Icon(
                                       CupertinoIcons.forward_end_alt,
                                       size: 40,
                                     ),
@@ -154,10 +145,10 @@ class HomePage extends StatelessWidget {
                   ? Colors.black87
                   : Colors.white,
               child: ListTile(
-                contentPadding: EdgeInsets.all(4),
+                contentPadding: const EdgeInsets.all(4),
                 leading: ClipRRect(
                   borderRadius: BorderRadius.circular(5),
-                  child: Container(
+                  child: SizedBox(
                       height: 50,
                       width: 50,
                       child: Image.asset(
@@ -166,16 +157,14 @@ class HomePage extends StatelessWidget {
                       )),
                 ),
                 trailing: CupertinoButton(
-                  padding: EdgeInsets.all(0),
-                  onPressed: () {
-                    //TODO: Add on pressed
-                  },
-                  child: Icon(
+                  padding: const EdgeInsets.all(0),
+                  onPressed: () {},
+                  child: const Icon(
                     CupertinoIcons.pause,
                     size: 40,
                   ),
                 ),
-                title: Container(
+                title: SizedBox(
                   height: 20,
                   child: Marquee(
                     text: "All about the perseverance rover by Samuel Baraka",
@@ -183,11 +172,11 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     blankSpace: 20.0,
                     velocity: 100.0,
-                    pauseAfterRound: Duration(seconds: 1),
+                    pauseAfterRound: const Duration(seconds: 1),
                     startPadding: 10.0,
-                    accelerationDuration: Duration(seconds: 1),
+                    accelerationDuration: const Duration(seconds: 1),
                     accelerationCurve: Curves.linear,
-                    decelerationDuration: Duration(milliseconds: 500),
+                    decelerationDuration: const Duration(milliseconds: 500),
                     decelerationCurve: Curves.easeOut,
                     style: GoogleFonts.redHatDisplay(
                         color: CupertinoTheme.brightnessOf(context) ==

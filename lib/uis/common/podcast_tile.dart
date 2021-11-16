@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:podcastic/test_images/test_images.dart';
 
 class PodcastTile extends StatelessWidget {
-  String image = TestImages.getRandomImage();
+  final String image = TestImages.getRandomImage();
 
   PodcastTile({Key? key}) : super(key: key);
 

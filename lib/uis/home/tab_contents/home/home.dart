@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:podcastic/test_images/test_images.dart';
 import 'package:podcastic/uis/common/podcast_tile.dart';
 import 'package:podcastic/uis/common/podcaster_widget.dart';
 
@@ -9,6 +8,8 @@ part 'for_you_widget.dart';
 part 'new_podcasts_widget.dart';
 
 class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
@@ -33,7 +34,7 @@ class Home extends StatelessWidget {
                       fontSize: 24,
                       fontWeight: FontWeight.bold),
                 ),
-                ForYouWidget(),
+                const ForYouWidget(),
                 Text(
                   "New podcasts",
                   style: GoogleFonts.redHatDisplay(
@@ -44,7 +45,7 @@ class Home extends StatelessWidget {
                       fontSize: 24,
                       fontWeight: FontWeight.bold),
                 ),
-                Expanded(child: NewPodcastsWidget())
+                const Expanded(child: NewPodcastsWidget())
               ],
             ),
           ),

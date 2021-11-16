@@ -21,7 +21,7 @@ class Explore extends StatelessWidget {
                   crossAxisCount: (MediaQuery.of(context).size.height /
                           MediaQuery.of(context).size.width)
                       .ceil()),
-              children: [
+              children: const [
                 Category(),
                 Category(),
                 Category(),
@@ -35,12 +35,14 @@ class Explore extends StatelessWidget {
 }
 
 class Category extends StatelessWidget {
+  const Category({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ctx.CupertinoContextMenu(
-        actions: [
+        actions: const [
           Text("sam"),
           Text("sam"),
         ],

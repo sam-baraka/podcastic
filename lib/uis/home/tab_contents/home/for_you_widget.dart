@@ -1,7 +1,8 @@
 part of 'home.dart';
 
-// ignore: use_key_in_widget_constructors
 class ForYouWidget extends StatelessWidget {
+  const ForYouWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
