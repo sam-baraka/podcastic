@@ -1,4 +1,4 @@
-package com.vercetti.podcastic
+package com.example.podcastic
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:podcastic/colors/app_colors.dart';
+import 'package:podcastic/config/config.dart';
 import 'package:podcastic/routes/routes.gr.dart';
 
 void main() {
@@ -16,6 +16,8 @@ void main() {
 
 class PodcastApp extends StatelessWidget {
   final _appRouter = AppRouter();
+
+  PodcastApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return CupertinoApp.router(
@@ -23,7 +25,7 @@ class PodcastApp extends StatelessWidget {
       routerDelegate: _appRouter.delegate(),
       title: 'Podcastic',
       theme: CupertinoThemeData(
-          primaryColor: AppColors.appLightGreenColor,
+          primaryColor: Palette.appLightGreenColor,
           textTheme:
               CupertinoTextThemeData(textStyle: GoogleFonts.redHatDisplay())),
     );

@@ -3,11 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:podcastic/test_images/test_images.dart';
 
 class PodcasterWidget extends StatelessWidget {
-  String image = TestImages.getRandomImage();
+  final String image = TestImages.getRandomImage();
+
+  PodcasterWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    Color color = Colors.black;
     return ClipRRect(
       borderRadius: BorderRadius.circular(5),
       child: GridTile(
@@ -18,7 +19,7 @@ class PodcasterWidget extends StatelessWidget {
               color: Colors.black54,
               image: DecorationImage(
                   colorFilter:
-                      ColorFilter.mode(Colors.black54, BlendMode.dstATop),
+                      const ColorFilter.mode(Colors.black54, BlendMode.dstATop),
                   image: AssetImage(image),
                   fit: BoxFit.fitHeight)),
           child: GridTile(
