@@ -4,8 +4,7 @@
 
 import 'dart:math' as math;
 import 'dart:ui' as ui;
-import 'package:flutter/gestures.dart'
-    show kMinFlingVelocity, kLongPressTimeout;
+import 'package:flutter/gestures.dart' show kMinFlingVelocity;
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -1195,7 +1194,7 @@ class _ContextMenuSheet extends StatelessWidget {
     required this.actions,
     required _ContextMenuLocation contextMenuLocation,
     required Orientation orientation,
-  })   : assert(actions != null && actions.isNotEmpty),
+  })  : assert(actions != null && actions.isNotEmpty),
         assert(contextMenuLocation != null),
         assert(orientation != null),
         _contextMenuLocation = contextMenuLocation,
@@ -1279,7 +1278,7 @@ class _OnOffAnimation<T> extends CompoundAnimation<T> {
     required T offValue,
     required double intervalOn,
     required double intervalOff,
-  })   : _offValue = offValue,
+  })  : _offValue = offValue,
         assert(intervalOn >= 0.0 && intervalOn <= 1.0),
         assert(intervalOff >= 0.0 && intervalOff <= 1.0),
         assert(intervalOn <= intervalOff),

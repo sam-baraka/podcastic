@@ -16,6 +16,8 @@ void main() {
 
 class PodcastApp extends StatelessWidget {
   final _appRouter = AppRouter();
+
+  PodcastApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return CupertinoApp.router(

@@ -6,6 +6,8 @@ import 'package:podcastic/uis/home/tab_contents/tab_contents.dart';
 import 'package:marquee/marquee.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -26,7 +28,7 @@ class HomePage extends StatelessWidget {
             }
           },
           tabBar: CupertinoTabBar(
-            items: [
+            items: const [
               BottomNavigationBarItem(
                   icon: Icon(CupertinoIcons.home), label: 'Home'),
               BottomNavigationBarItem(

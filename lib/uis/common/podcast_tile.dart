@@ -6,6 +6,8 @@ import 'package:podcastic/test_images/test_images.dart';
 class PodcastTile extends StatelessWidget {
   String image = TestImages.getRandomImage();
 
+  PodcastTile({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,7 +17,7 @@ class PodcastTile extends StatelessWidget {
             ? Colors.black
             : Colors.white,
         child: ListTile(
-          leading: Container(
+          leading: SizedBox(
               height: 50,
               width: 50,
               child: Image.asset(
@@ -39,7 +41,8 @@ class PodcastTile extends StatelessWidget {
             ),
           ),
           trailing: CupertinoButton(
-              onPressed: () {}, child: Icon(CupertinoIcons.cloud_download)),
+              onPressed: () {},
+              child: const Icon(CupertinoIcons.cloud_download)),
         ),
       ),
     );

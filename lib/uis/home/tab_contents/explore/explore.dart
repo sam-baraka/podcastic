@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:podcastic/uis/custom/context_menu.dart' as ctx;
-import 'package:google_fonts/google_fonts.dart';
-import 'package:podcastic/uis/common/sliver_app_bar_delegate.dart';
 
 class Explore extends StatelessWidget {
+  const Explore({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+      navigationBar: const CupertinoNavigationBar(
         middle: CupertinoTextField(
           placeholder: "Search",
         ),

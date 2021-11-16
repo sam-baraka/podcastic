@@ -11,7 +11,7 @@ class TestImages {
 
   static String getRandomImage() {
     // generates a new Random object
-    final _random = new Random();
+    final _random = Random();
 
 // generate a random index based on the list length
 // and use it to retrieve the element

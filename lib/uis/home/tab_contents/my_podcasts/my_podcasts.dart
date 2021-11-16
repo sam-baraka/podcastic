@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:podcastic/uis/uis.dart';
 
 class MyPodcasts extends StatelessWidget {
+  const MyPodcasts({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-        navigationBar: CupertinoNavigationBar(
+        navigationBar: const CupertinoNavigationBar(
           middle: Text("My podcasts"),
         ),
         child: ListView(
