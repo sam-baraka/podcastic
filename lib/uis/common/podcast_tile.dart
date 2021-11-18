@@ -33,7 +33,7 @@ class PodcastTile extends StatelessWidget {
             ),
           ),
           subtitle: Text(
-            "Lew Later",
+            'Lew Later',
             style: GoogleFonts.redHatDisplay(
               color: CupertinoTheme.brightnessOf(context) == Brightness.dark
                   ? Colors.white

@@ -64,7 +64,7 @@ class HomePage extends StatelessWidget {
                               height: 20,
                               child: Marquee(
                                 text:
-                                    "All about the perseverance rover by Samuel Baraka",
+                                    'All about the perseverance rover by Samuel Baraka',
                                 scrollAxis: Axis.horizontal,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 blankSpace: 20.0,
@@ -167,7 +167,7 @@ class HomePage extends StatelessWidget {
                 title: SizedBox(
                   height: 20,
                   child: Marquee(
-                    text: "All about the perseverance rover by Samuel Baraka",
+                    text: 'All about the perseverance rover by Samuel Baraka',
                     scrollAxis: Axis.horizontal,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     blankSpace: 20.0,
