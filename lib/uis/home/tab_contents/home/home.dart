@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
         child: CustomScrollView(
       slivers: [
         CupertinoSliverNavigationBar(
-          largeTitle: Text("Podcastic", style: GoogleFonts.redHatDisplay()),
+          largeTitle: Text('Podcastic', style: GoogleFonts.redHatDisplay()),
         ),
         SliverFillRemaining(
           child: Padding(
@@ -25,7 +25,7 @@ class Home extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Top podcasts for you",
+                  'Top podcasts for you',
                   style: GoogleFonts.redHatDisplay(
                       color: CupertinoTheme.brightnessOf(context) ==
                               Brightness.dark
@@ -36,7 +36,7 @@ class Home extends StatelessWidget {
                 ),
                 const ForYouWidget(),
                 Text(
-                  "New podcasts",
+                  'New podcasts',
                   style: GoogleFonts.redHatDisplay(
                       color: CupertinoTheme.brightnessOf(context) ==
                               Brightness.dark

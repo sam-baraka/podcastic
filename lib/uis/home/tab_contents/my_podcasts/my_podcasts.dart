@@ -9,7 +9,7 @@ class MyPodcasts extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
         navigationBar: const CupertinoNavigationBar(
-          middle: Text("My podcasts"),
+          middle: Text('My podcasts'),
         ),
         child: ListView(
           children: [

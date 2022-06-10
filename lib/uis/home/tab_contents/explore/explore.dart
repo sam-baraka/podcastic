@@ -10,7 +10,7 @@ class Explore extends StatelessWidget {
     return CupertinoPageScaffold(
       navigationBar: const CupertinoNavigationBar(
         middle: CupertinoTextField(
-          placeholder: "Search",
+          placeholder: 'Search',
         ),
       ),
       child: Column(
@@ -43,8 +43,8 @@ class Category extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: ctx.CupertinoContextMenu(
         actions: const [
-          Text("sam"),
-          Text("sam"),
+          Text('sam'),
+          Text('sam'),
         ],
         child: Container(
           height: 50,

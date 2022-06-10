@@ -25,7 +25,7 @@ class PodcasterWidget extends StatelessWidget {
           child: GridTile(
             footer: Center(
               child: Text(
-                "Waveform podcast",
+                'Waveform podcast',
                 style: GoogleFonts.redHatDisplay(
                     color: Colors.white, fontSize: 18),
               ),
